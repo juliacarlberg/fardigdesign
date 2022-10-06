@@ -1,3 +1,5 @@
+@use "mixins";
+
 .top-nav {
     display: flex;
     top: 0%;
@@ -8,6 +10,12 @@
     height: 20px;
     padding: 0.8em;
     background-color: rgba(255, 255, 255, 0.2);
+    padding-left: 90%;
+
+    @include mixins.desktop{
+        padding-left: 80%;
+    }
+
   }
   a {
     color: white;
