@@ -4,16 +4,26 @@ html{
     font-size: 14pt;
     body{
         margin: 0;
+        padding: 0;
     }
 }
 
 p{
-    font-size: 1.3rem;
+    font-size: 1.2rem;
 }
 
 h2{
     font-size: 2.5rem;
     text-align: center;
+}
+
+.arrow{
+    margin-top: 60%;
+
+    @include mixins.desktop{
+        margin-top: 20%;
+    }
+
 }
 
 
@@ -24,7 +34,6 @@ header{
     background-size: cover;
     height: 100vh;
     margin: 0%;
-    padding-top: 5%;
     margin: 0;
     nav{
         ul{
@@ -35,13 +44,25 @@ header{
 
 .presentteam{
 
+    @include mixins.desktop{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+
     .team-member{
 
         text-align: center;
-        display: flex;
         align-items: center;
         justify-content: center;
-        display: block;
+
+        @include mixins.desktop{
+            width: 40%;
+
+        }
 
         img{
             width: 50%;
@@ -55,10 +76,14 @@ header{
     
         .desc{
             background-color: lightgray;
-            padding: 10%;
+            padding: 5%;
             margin: 10%;
             border-radius: 10px;
             text-align: start;
+
+            @include mixins.desktop{
+                height: 15vh;
+            }
         }
     
         i{
